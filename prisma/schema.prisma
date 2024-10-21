@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./bank.db"
+}
+
+model User {
+  id           Int   @id @default(autoincrement())
+  name         String
+  lastName     String
+  password     String
+  dni          Int @unique
+  CreditCard   CreditCard[]
+  createAt     DateTime @default(now())
+  updatedAt    DateTime? @updatedAt
+  deletedAt    DateTime?
+}
+
+model CreditCard {
+  id           Int @id @default(autoincrement())
+  name         String
+  lastName     String 
+  cardNumber   BigInt @unique
+  code         Int
+  type         String
+  user         User @relation(fields: [userDni], references: [dni])
+  userDni      Int
+  createAt     DateTime @default(now())
+  updatedAt    DateTime? @updatedAt
+  deletedAt    DateTime?
+}

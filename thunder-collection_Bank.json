@@ -1,0 +1,166 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Bank",
+    "collectionId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+    "dateExported": "2024-10-21T01:04:48.414Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "User",
+            "containerId": "",
+            "created": "2024-10-20T04:06:10.530Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "CreditCard",
+            "containerId": "",
+            "created": "2024-10-20T04:06:22.709Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "fe43c2a8-f69a-43fa-80ab-f21c7fc2fdc2",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "CreateUser",
+            "url": "localhost:3000/api/user",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-20T04:06:31.653Z",
+            "modified": "2024-10-20T04:33:48.600Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Mariano\",\n  \"lastName\": \"Juliano\",\n  \"password\": \"fgfdgd\",\n  \"dni\": 12444323\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0266f860-af29-4032-8c27-5befc73d7457",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "GetAllUsers",
+            "url": "localhost:3000/api/user",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-10-20T04:06:41.225Z",
+            "modified": "2024-10-20T04:09:08.175Z",
+            "headers": []
+        },
+        {
+            "_id": "49c45541-b328-48fa-9204-f9798bb25531",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "GetUser",
+            "url": "localhost:3000/api/user/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-20T04:06:46.807Z",
+            "modified": "2024-10-20T04:34:11.443Z",
+            "headers": []
+        },
+        {
+            "_id": "55b04cd8-ab3e-4b26-b7f1-a25c2cfb6ce9",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "UpdateUser",
+            "url": "localhost:3000/api/user/1",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2024-10-20T04:06:54.770Z",
+            "modified": "2024-10-20T04:36:03.266Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Miguel\",\n  \"lastName\": \"Peña\",\n  \"password\": \"44364\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9e23ea04-e827-4c10-ab91-e2aba50a89c0",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "d20244ea-751f-4e81-b953-ffe4fee56098",
+            "name": "DeleteUser",
+            "url": "localhost:3000/api/user/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-10-20T04:07:01.460Z",
+            "modified": "2024-10-20T04:36:20.314Z",
+            "headers": []
+        },
+        {
+            "_id": "1fb13033-8a0e-4f72-ad95-83058f4c933c",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "CreateCard",
+            "url": "localhost:3000/api/card",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-10-20T04:37:25.881Z",
+            "modified": "2024-10-20T05:26:33.539Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Dario\",\n  \"lastName\": \"Lopez\",\n  \"type\": \"Credit\",\n  \"userDni\": 44777444\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "54ac019b-295a-4f10-8915-f9d2341a49aa",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "GetAllCards",
+            "url": "localhost:3000/api/card",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-10-21T00:05:21.848Z",
+            "modified": "2024-10-21T00:05:47.702Z",
+            "headers": []
+        },
+        {
+            "_id": "99869615-e7b0-4823-8a07-5f568dec758a",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "GetCard",
+            "url": "localhost:3000/api/card/1",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-10-21T00:22:48.530Z",
+            "modified": "2024-10-21T00:23:08.463Z",
+            "headers": []
+        },
+        {
+            "_id": "6a61dabd-bcd6-473e-a63a-cd6fad213d2c",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "UpdateCard",
+            "url": "localhost:3000/api/card/1",
+            "method": "PATCH",
+            "sortNum": 90000,
+            "created": "2024-10-21T00:25:24.967Z",
+            "modified": "2024-10-21T00:26:05.081Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Dario\",\n  \"lastName\": \"Lopez\",\n  \"type\": \"Debit\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "f10d0ecd-c5b0-4a5e-bd94-8feb5a19b596",
+            "colId": "1a76ca09-478c-48b7-8294-363b51bdcd4f",
+            "containerId": "72ef3c59-c8ec-407d-bf96-415f6bfa5dc7",
+            "name": "DeleteCard",
+            "url": "localhost:3000/api/card/1",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-10-21T00:27:45.931Z",
+            "modified": "2024-10-21T00:27:56.505Z",
+            "headers": []
+        }
+    ],
+    "ref": "pdhvoAuxLdOdT8uI8M5hEVEpNlVZfyaZW6V69P6lPcsq31ou4LohtL8hkjQ6i3VszKTQCzxH9R2FSYYVX32pOg"
+}
