@@ -4,7 +4,7 @@ import userRoutes from './src/user/user.routes.js'
 import cardRoutes from './src/card/card.routes.js'
 
 const app = express();
-const port = parseInt(process.env.APIBOOK_PORT) || 3000;
+const port = parseInt(process.env.APIBANK_PORT) || 3000;
 
 app.use(express.json());
 
@@ -16,5 +16,5 @@ app.use('/api', userRoutes);
 app.use('/api', cardRoutes);
 
 app.listen(port, () =>{
-    console.log('Servidor funcionando');
+    console.log(`Server funcionando en http://localhost:${port}`);
 });

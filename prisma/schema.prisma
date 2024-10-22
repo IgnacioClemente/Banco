@@ -29,8 +29,8 @@ model CreditCard {
   id           Int @id @default(autoincrement())
   name         String
   lastName     String 
-  cardNumber   BigInt @unique
-  code         Int
+  cardNumber   String @unique
+  code         String
   type         String
   user         User @relation(fields: [userDni], references: [dni])
   userDni      Int

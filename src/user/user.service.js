@@ -2,7 +2,7 @@ import prisma from "../../prisma/prismaClient.js";
 import bcrypt from 'bcryptjs';
 import { existUser } from "./user.controller.js";
 
-export const getAllUsers = async () => {
+export const getAllUsers = async () =>{
     const users = await prisma.user.findMany({
         select:{
             id: true,
@@ -12,11 +12,10 @@ export const getAllUsers = async () => {
         },
         where: {deletedAt:null}
     });
-
     return users;
-}
+};
 
-export const getUserById = async (id) => {
+export const getUserById = async (id) =>{
     const user = await prisma.user.findUniqueOrThrow({
         select:{
             id: true,
@@ -29,11 +28,10 @@ export const getUserById = async (id) => {
     },
         where:{id, deletedAt: null}
     });
-    
     return user;     
-}
+};
 
-export const createUser = async (user) => {
+export const createUser = async (user) =>{
     const {name, lastName, password, dni} = user;
     const passwordBcrypt = await bcrypt.hash(password, 10);
     const user_Create = await prisma.user.create({
@@ -43,11 +41,10 @@ export const createUser = async (user) => {
         password: passwordBcrypt,
         dni
     }});
-
     return user_Create;
-}
+};
 
-export const updateUser = async (id,user) => {
+export const updateUser = async (id,user) =>{
         const {name, lastName, password} = user;
         const passwordBcrypt = await bcrypt.hash(password, 10);
         const userUpdate = await prisma.user.update({
@@ -59,7 +56,7 @@ export const updateUser = async (id,user) => {
             }
         });
         return userUpdate;
-}
+};
 
 export const deleteUser = async (id) =>{
     const userExist = await existUser(id);
@@ -68,4 +65,4 @@ export const deleteUser = async (id) =>{
         data: {deletedAt: new Date()}
     });
     return userDelete;
-}
+};

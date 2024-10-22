@@ -1,7 +1,8 @@
-# Api - books
+# Api - Bank
 - ``` npm init ```
 - ``` npm install express  ```
 - ``` npm install bcryptjs  ```
+- ``` npx install lodash ```
 - ``` npm install prisma @prisma/client  ```
 - ``` npx prisma init ```
 
@@ -14,4 +15,4 @@
 - ``` npx prisma migrate status ```
 
 ## Variables de Entorno
-- APIBOOK_PORT =
+- APIBANK_PORT =
